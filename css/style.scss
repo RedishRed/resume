@@ -139,6 +139,9 @@ body{
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1px;
+        cursor:pointer;
+        position:relative;
+        transition: all .5s;
     }
     /** end of extends **/
     .text-paragraph-xs{
@@ -164,7 +167,13 @@ body{
             font-weight: bold;
             text-transform: uppercase;
             line-height: .8rem;
-
+            transition: all .5s;
+            &:hover{
+                transform: translate(.5rem,0);
+                -webkit-transform: translate(.5rem,0); /** Safari & Chrome **/
+                -o-transform: translate(.5rem,0); /** Opera **/
+                -moz-transform: translate(.5rem,0); /** Firefox **/
+            }
             & > span{
                 color:$white;
                 font-size: .75rem;
@@ -173,12 +182,21 @@ body{
         }
 
         & > #navbar_menu{  
+            position:relative;
         }
         .menu-item{
             font-size: 1.2rem;
             float:right;
             margin-right:5%;
             color:$white;
+            transition: all .5s;
+            &:hover{ 
+                color:$mediumturquoise;
+                transform: translate(-1rem,0);
+                -webkit-transform: translate(-1rem,0); /** Safari & Chrome **/
+                -o-transform: translate(-1rem,0); /** Opera **/
+                -moz-transform: translate(-1rem,0); /** Firefox **/
+            }
         }
         font-family:"Poppins", sans-serif;
         .custom-toggler .navbar-toggler-icon {
@@ -228,6 +246,13 @@ body{
                 margin:1rem 0;
                 & > .btn-downnload{
                     @extend %btn-style;
+                    &:hover{
+                        background-color:$mediumturquoise;
+                        a{
+                            color:$black;
+                        }
+                    }
+
                 }
             }
             & > .scroll-down-btn{
@@ -242,7 +267,15 @@ body{
                     font-weight: bold;
                     letter-spacing: .1rem;
                     font-size:.9rem;
+                    transition:all .5s;
+                    border-bottom: 1px solid $black-grey;
+                    &:hover{
+                        top:.3rem;
+                        color:$mediumturquoise;
+                        border-bottom:1px solid $mediumturquoise;
+                    }   
                 }
+                
             }
         }
     }
@@ -388,10 +421,8 @@ body{
         .message-container{
             width:80%;
         }
-        .btn-submit{
-            @extend %btn-style;
-            float:right;
-        }
+
+
         .contact-email{
             color:$mediumturquoise;
             font-style: italic;
@@ -399,6 +430,13 @@ body{
         }
         .btn-email{
             @extend %btn-style;   
+        }
+        .btn-email:hover{
+            background-color:$mediumturquoise;
+            color:$white;
+            a{
+                color:$black;
+            }
         }
         .contact-detail{
             width:50%;
@@ -575,7 +613,7 @@ body{
     .brain-img{ 
         position:absolute;
         top:50%;
-        left:50%;
+        left:10%;
         transform:translate(-50%,-50%);
         z-index:-2;
         width:300px !important;

@@ -119,7 +119,7 @@ body {
   /** end of contact section **/
   /** footer section **/
   /** end of footer section **/ }
-  body .banner-box .banner-details > .banner-btn > .btn-downnload, body #contact .btn-submit, body #contact .btn-email {
+  body .banner-box .banner-details > .banner-btn > .btn-downnload, body #contact .btn-email {
     font-family: "Poppins", sans-serif;
     margin: 1rem 0;
     background-color: transparent;
@@ -128,7 +128,10 @@ body {
     color: #2ec3ed;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px; }
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    transition: all .5s; }
   body .text-paragraph-xs {
     font-family: "Source Sans Pro", sans-serif;
     color: #d6d7ec;
@@ -147,16 +150,37 @@ body {
       font-size: .9rem;
       font-weight: bold;
       text-transform: uppercase;
-      line-height: .8rem; }
+      line-height: .8rem;
+      transition: all .5s; }
+      body nav > .navbar-brand:hover {
+        transform: translate(0.5rem, 0);
+        -webkit-transform: translate(0.5rem, 0);
+        /** Safari & Chrome **/
+        -o-transform: translate(0.5rem, 0);
+        /** Opera **/
+        -moz-transform: translate(0.5rem, 0);
+        /** Firefox **/ }
       body nav > .navbar-brand > span {
         color: #FFFFFF;
         font-size: .75rem;
         font-weight: 400; }
+    body nav > #navbar_menu {
+      position: relative; }
     body nav .menu-item {
       font-size: 1.2rem;
       float: right;
       margin-right: 5%;
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      transition: all .5s; }
+      body nav .menu-item:hover {
+        color: #2ec3ed;
+        transform: translate(-1rem, 0);
+        -webkit-transform: translate(-1rem, 0);
+        /** Safari & Chrome **/
+        -o-transform: translate(-1rem, 0);
+        /** Opera **/
+        -moz-transform: translate(-1rem, 0);
+        /** Firefox **/ }
     body nav .custom-toggler .navbar-toggler-icon {
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(33, 37, 41)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
     body nav .custom-toggler.navbar-toggler {
@@ -192,6 +216,10 @@ body {
         width: 8%; }
       body .banner-box .banner-details > .banner-btn {
         margin: 1rem 0; }
+        body .banner-box .banner-details > .banner-btn > .btn-downnload:hover {
+          background-color: #2ec3ed; }
+          body .banner-box .banner-details > .banner-btn > .btn-downnload:hover a {
+            color: #000000; }
       body .banner-box .banner-details > .scroll-down-btn {
         position: relative;
         font-family: "Poppins", sans-serif; }
@@ -203,7 +231,13 @@ body {
           color: #191919;
           font-weight: bold;
           letter-spacing: .1rem;
-          font-size: .9rem; }
+          font-size: .9rem;
+          transition: all .5s;
+          border-bottom: 1px solid #191919; }
+          body .banner-box .banner-details > .scroll-down-btn p:hover {
+            top: .3rem;
+            color: #2ec3ed;
+            border-bottom: 1px solid #2ec3ed; }
   body #about {
     position: relative;
     padding: 5rem 1rem 1rem 1rem; }
@@ -304,12 +338,15 @@ body {
       position: relative; }
     body #contact .message-container {
       width: 80%; }
-    body #contact .btn-submit {
-      float: right; }
     body #contact .contact-email {
       color: #2ec3ed;
       font-style: italic;
       text-decoration: underline; }
+    body #contact .btn-email:hover {
+      background-color: #2ec3ed;
+      color: #FFFFFF; }
+      body #contact .btn-email:hover a {
+        color: #000000; }
     body #contact .contact-detail {
       width: 50%;
       color: #d6d7ec; }
@@ -450,7 +487,7 @@ body {
   .brain-img {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 10%;
     transform: translate(-50%, -50%);
     z-index: -2;
     width: 300px !important;
