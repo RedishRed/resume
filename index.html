@@ -3,44 +3,331 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lawrence</title>
+	<title>James Lawrence</title>
 
-	<!-- link stylesheets -->
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<!-- animate on scroll -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+	<!-- Font Awesome -->
 	<link rel="stylesheet" type="text/css" href="./css/all.min.css">
+
+	<!-- Bootstrap -->
+	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-	<script src="./js/bootstrap.min.js"></script>
-	<script src="./js/jquery.min.js"></script>
-	<script src="./js/popper.min.js"></script>
+
+	<!-- css stylesheet -->
+	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 	<!-- navbar -->
-	<header>
-	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-		<!-- navbar logo -->
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Logo</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu"aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-		<div class="collapse navbar-collapse justify-content-center " id="navbarMenu">
+	<nav class="navbar fixed-top">
+		<a class="navbar-brand" href="#">James Lawrence<span class="nav-profession">Web Developer</span></a>
+		<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle Menu">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-end" id="navbar_menu">
 			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link active" href="#home">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#about">About</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#portfolio">Portfolio</a>
-				</li>
-				<li>
-					<button class="btn btn-primary" type="">Say Hi</button>
-				</li>
-			</ul>		
+				<li class="nav-item"><a class="menu-item active" href="#home">Home</a></li>
+				<li class="nav-item"><a class="menu-item" href="#about">About</a></li>
+				<li class="nav-item"><a class="menu-item" href="#skills">Skills</a></li>
+				<li class="nav-item"><a class="menu-item" href="#portfolio">Portfolio</a></li>
+				<li class="nav-item"><a class="menu-item" href="#contact">Contact</a></li>
+			</ul>
 		</div>
-		</div>	
 	</nav>
-	</header>
+	<!-- end of navbar -->
+
+	<!-- header home -->
+	<section id="home">
+		<div class="container-fluid banner-box">
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<div class="banner-details" data-aos="fade-right">
+						<h3>Hi, I'm</h3>
+						<h1>Lawrence</h1>
+						<h3>Full Stack Web Developer</h3>
+						<div class="line-box">
+							<div class="line"></div>
+							<div class="line-two"></div>
+						</div>
+							<img class="img-fluid banner-img-quote" src="./images/l-quote.svg" alt="quote">
+						
+						<p class="text-paragraph-xs">
+								A person who is determine for improvement as well as self improvement. While the world keeps on evolving as a human, knowledge is everything and to not be left out in this world is an achievement for a successful dream. 
+						</p>
+						<div class="banner-btn">			
+							<button class="btn btn-danger btn-downnload" type="submit">Download CV <i class="fas fa-file-download"></i></button>
+						</div>
+						<div class="scroll-down-btn">
+							<a href="#about"><p>scroll down <i class="fas fa-arrow-down"></i></p></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="img-box"  data-aos="fade-left">
+						<img class="img-fluid profile-pic" src="./images/prg-james.png" alt="">
+					</div>
+				</div>
+			</div>	
+		</div>		
+	</section>
+	<!-- end of header home -->
+
+	<!-- about section -->
+	<section class="" id="about">
+		<div class="about-container mx-auto">
+			<div class="about-header" data-aos="fade-down">
+				<span class="number-bg">01</span>
+				<h4 class="title-text-xs">Destination</h4>
+				<h6 class="sub-title-text-xs">Journey Introduction</h6>
+			</div>
+			<div class="line-box" data-aos="fade-right">
+				<div class="line"></div>
+				<div class="line-two"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<p class="text-paragraph-xs mt-5" data-aos="fade-right">
+							I specialize in developing websites that has quality both frontend and backend. Enthusiastically exploring the vast world of web developing and continuously learning each web framework. Through this i am able to develope different types of website and someday work on a company with a ton of projects.      
+					</p>
+				</div>
+				<div class="col-md-6  col-sm-6 mt-2" data-aos="fade-left">
+					<div class="container-fluid d-flex skill-container">
+						<img src="./images/html.png" class="img-skill"  alt="">
+						<div class="skill-details">
+							<h6>HTML</h6>
+							<div class="progress">
+								<div class="progress-bar html-progress" role="progress-bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>									
+						</div>
+					</div>
+					<div class="container-fluid d-flex skill-container">
+						<img src="./images/css.png" class="img-skill"  alt="">
+						<div class="skill-details">
+							<h6>CSS</h6>
+							<div class="progress">
+								<div class="progress-bar css-progress" role="progress-bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>									
+						</div>
+					</div>
+					<div class="container-fluid d-flex skill-container">
+						<img src="./images/js.png" class="img-skill"  alt="">
+						<div class="skill-details">
+							<h6>Javascript</h6>
+							<div class="progress">
+								<div class="progress-bar js-progress" role="progress-bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>									
+						</div>
+					</div>
+					<div class="container-fluid d-flex skill-container">
+						<img src="./images/node.png" class="img-skill"  alt="">
+						<div class="skill-details">
+							<h6>Node JS</h6>
+							<div class="progress">
+								<div class="progress-bar node-progress" role="progress-bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>									
+						</div>
+					</div>
+				</div>	
+				</div>
+				</div>
+			</div>
+			<div class="qualification-container">
+				<div class="row gx-4 pt-3 px-4">	
+					<div class="col-lg-4 col-md-6 col-sm-6 mt-5">
+
+						<div class="qualification-box"  data-aos="fade-right">
+							<div class="qualification-header">
+								<i class="fas fa-graduation-cap qualification-icon"></i>
+								<h4 class="qualification-title-xs">University of Makati</h4>
+							</div>
+							<p class="qualification-sub-xs">
+								Bachelor of Science In Computer Science Major In Application Development
+							</p>
+							<p class="qualification-paragraph-xs">	June 2015 - April 2019</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-6 mt-5">
+						<div class="qualification-box" data-aos="fade-down">
+							<div class="qualification-header">
+								<i class="fas fa-briefcase qualification-icon"></i>
+								<h4 class="qualification-title-xs">Tata 	Consultancy Services</h4>
+							</div>
+							<p class="qualification-sub-xs">Application Systems Engineer</p>
+							<p class="qualification-paragraph-xs">May 2019 - Present</p>
+						</div>		
+					</div>
+					<div class="col-lg-4 col-md-12 col-sm-12 mt-5">
+						<div class="qualification-box" data-aos="fade-left">
+							<div class="qualification-header">
+								<i class="fas fa-bullseye qualification-icon"></i>
+								<h4 class="qualification-title-xs">Zuitt Bootcamp</h4>
+							</div>
+							<p class="qualification-sub-xs">Training for Web Development</p>
+							<p  class="qualification-paragraph-xs">September 2021 - December 2021</p>
+						</div>
+					</div>
+				</div>
+			</div>				
+		</div>
+	</section>
+	<!-- end about section -->
+
+	<!-- skills section -->
+	<section id="skills">
+		<div class="skills-container mx-auto">
+			<div class="skills-header" data-aos="fade-up">
+				<span class="number-bg">02</span>
+				<h4 class="title-text-xs">Skillset</h4>
+				<h6 class="sub-title-text-xs">Qualifications</h6>
+			</div>
+
+			<div class="line-box"  data-aos="fade-right">
+				<div class="line"></div>
+				<div class="line-two"></div>
+			</div>
+			<div class="row">
+			<img class="brain-img" src="./images/brain.png" alt="brain"   data-aos="fade-left">
+				<div class="col-md-4 col-sm-6 s-box">
+						<div class="mx-auto skill-box"  data-aos="fade-up">
+						<div class="front-end-header" >
+							<i class="fas fa-laptop-code icon-knowledge"></i>
+							<p class="s-title">Front-End</p>
+						</div>
+						<div  data-aos="fade-right">
+						<p class="s-paragraph">Hypertext Markup Language (HTML)</p>
+						<p class="s-paragraph">Cascading Style Sheet (CSS)</p>
+						<p class="s-paragraph">Syntactically Awesome Style Sheets(SCSS)</p>
+						<p class="s-paragraph">Javascript</p>
+						<p class="s-paragraph">React JS</p>
+					</div>
+						</div>
+				</div>
+				<div class="col-md-4  col-sm-6 s-box">
+					<div class="mx-auto skill-box"   data-aos="fade-up">
+						<p class="s-title">Back-End <i class="fas fa-code icon-knowledge"></i></p>
+						<div   data-aos="fade-right">
+						<p class="s-paragraph">PHP: Hypertext Preprocessor</p>
+						<p class="s-paragraph">Node JS </p>
+						<p class="s-paragraph">Express JS</p>
+						<p class="s-paragraph">Report Program Generator (RPGLE)</p>
+						<p class="s-paragraph">Control Language Program (CL)</p>	
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4  col-sm-6 s-box">
+					<div class="mx-auto skill-box"   data-aos="fade-up">
+						<p class="s-title">Database <i class="fas fa-database icon-knowledge"></i></p>
+						<div   data-aos="fade-right">
+						<p class="s-paragraph">Mysql</p>
+						<p class="s-paragraph">Database II</p>
+						<p class="s-paragraph">Mongo Database</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4  col-sm-6 s-box">
+					<div class="mx-auto skill-box"  data-aos="fade-up">
+						<p class="s-title">Other <i class="fas fa-stream icon-knowledge"></i></p>
+						<div   data-aos="fade-right">
+						<p class="s-paragraph">IBM Application Systems 400 (AS400)</p>
+						<p class="s-paragraph">Git Version Control</p>
+						<p class="s-paragraph">System Development Life Cycle (SDLC)</p>
+						<p class="s-paragraph">Agile Development</p>
+					</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>	
+	</section>
+<!-- 	<section>
+
+	</section>
+ -->	<!-- end of skills section -->
+
+	<!-- Portfolio section -->
+	<section class="mt-5 mb-5" id="portfolio">
+	</section>
+	<!-- end portfolio section -->
+
+	<!-- contact section -->
+	<section id="contact">
+		<div class="message-container mx-auto">
+		<div class="message-header"   data-aos="fade-up">
+		<span class="number-bg">03</span>
+		<h4 class="title-text-xs">Queries or Projects</h4>
+		<h6 class="sub-title-text-xs pb-4">Whats next?</h6> 
+		</div>
+		<div class="contact-box">
+			<div class="row">
+				<div class="text-center contact-detail mx-auto"   data-aos="fade-down">
+					<p class="text-center -text-paragraph-xs">If you have any questions, queries or need help you can drop me a message <span class="contact-email">jvillanueva@gmail.com</span> and let see what we can do to fulfill your dream website. </p>
+					<button class="btn btn-primary btn-email"><a href="https://gmail.com">Email Me <i class="fas fa-envelope"></i></a></button>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<!-- end contact section -->
+	<!-- footer section -->
+	<div class="custom-shape-divider-bottom-1632321456">
+		<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+			<path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+		</svg>
+	</div>
+	<section id="footer">
+		<div class="footer-container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<p class="footer-title">Let's connect</p>
+					<p class="footer-details">If you have any questions or projects in mind message me:</p>
+					<div class="footer-connect-item">
+						<ul>
+							<li class="footer-item"><i class="far fa-envelope media-icons-xs"></i>jvillanueva@gmail.com</li>
+							<li class="footer-item"><i class="fas fa-map-marker-alt media-icons-xs"></i> Juan Luna Street, Makati City</li>
+							<li class="footer-item"><i class="fas fa-phone-alt media-icons-xs"></i> (+09) 120 403 489</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<p class="footer-title">Menu's </p>
+					<div class="footer-menu">
+						<ul class="breadcrumb footer-menu-item">
+							<li class="breadcrumb-item"><a class="footer-item" href="#home">Home</a></li>
+							<li class="breadcrumb-item"><a class="footer-item" href="#about">About</a></li>
+							<li class="breadcrumb-item"><a class="footer-item" href="#skills">Skills</a></li>
+							<li class="breadcrumb-item"><a class="footer-item" href="#contact">contact</a></li>
+						</ul>
+					</div>
+					<p class="footer-title">Social Media</p>
+					<div class="social-media">
+						<ul class="social-media-menu">
+							<li><a  href="https://www.facebook.com/"><i class="fab fa-facebook-f media-icons-sm"></i></a></li>
+							<li><a  href="https://www.instagram.com/"><i class="fab fa-instagram  media-icons-sm"></i></a></li>
+							<li><a  href="https://www.linkedin.com/"><i class="fab fa-linkedin-in media-icons-sm"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright-box">
+			<span>&copy; 2021 Lawrence. All Rights Reserved</span>
+		</div>	
+	</section>
+
+	<!-- end of footer section -->
+	<!--- JS -->
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+  AOS.init({
+  	duration: 1200
+  });
+</script>
 </body>
 </html>

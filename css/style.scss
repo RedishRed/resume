@@ -1,3 +1,601 @@
 
 
-/** navbar **/
+/** theme colors **/
+$black: #000000;
+$black-grey: #191919;
+$dirty-black:#0C0C0C;
+$white: #FFFFFF;
+$yellow: #FFE81F;
+$gainsbro: #d6d7ec;
+$mediumturquoise: #2ec3ed;
+/** end theme colors **/
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $black;
+
+    a{
+        text-decoration: none;
+        color:$mediumturquoise;
+    }
+    ul{
+        padding: 0;
+        list-style-type: none;
+    }
+}
+/** css selectors **/
+/**xs and sm screens **/
+    /** text **/
+    .title-text-xs{
+        font-size:3rem;
+        margin: 0;
+    }
+    .text-paragraph-xs{
+        font-family: 'Source Sans Pro', sans-serif;
+        color:$gainsbro;
+        padding: 0 1rem;
+        text-align: justify;
+        margin:0;
+        width:85%;
+    }
+    .sub-title-text-xs{
+        font-size:1.5rem;
+    }
+    .sub-content-text-xs{
+        font-family: 'Source Sans Pro', sans-serif;
+        color:$gainsbro;
+        text-align: justify;
+        padding: 0 1rem;
+        font-size: 0.9rem;
+        margin:0;
+    }
+    /** end of text **/
+    /** section container **/ 
+    .section-xs{
+        position:relative;
+        height:100vh;
+        padding:5rem 1rem 1rem 1rem;
+    }
+
+    /** end of section container **/
+    /** floating number side **/
+    .number-bg{
+        font-size:10rem;
+        position:absolute;
+        left:-3rem;
+        bottom:-3rem;
+        z-index: -1;
+        color:$black-grey;
+    }
+    /** end of floating number side **/ 
+    /** media icon **/ 
+    .media-icons-xs{
+        margin:.1rem .5rem;
+        border-radius: 50%;
+        border:1px solid $mediumturquoise;
+    }
+    /** end of media icon **/
+    /** combined css **/
+    .sub-title-text-xs, .title-text-xs, .text-paragraph-xs{
+        color:$white;
+    }
+    .media-icons-xs, .media-icons-sm{
+        color:$mediumturquoise;
+        padding:.5rem;    
+    }
+    .sub-title-text-xs, .media-icons-sm{
+        font-size:1.5rem;
+    }
+    .line-box{
+        position:relative;
+    }
+    .line-box > .line{
+        width:2.2rem;
+        height:.2rem;
+        background-color:$yellow;
+        border-radius: 30px 30px;          
+        margin:1.2rem 0 .5rem 0;
+        overflow: hidden; 
+    }
+    .line-box > .line-two{
+        position: absolute;
+        top:0;
+        margin:0 0 0 2rem;
+        width:4rem;
+        height:.2rem;
+        background-color:$mediumturquoise;
+        border-radius: 30px 30px;
+    }
+    /** end of combined css **/
+/** end of xs and sm screens **/
+
+/** md screens **/
+/** end of md screens **/
+/** end of css selectors **/ 
+
+
+
+
+// @mixin margin($top:null, $right:null, $bottom:null, $left:null){
+//     top:$top;
+//     right:$right;
+//     bottom:$bottom;
+//     left:$left;
+// }
+
+/** global value **/
+body{
+    /** extends **/
+    %btn-style{
+        font-family:"Poppins", sans-serif;
+        margin:1rem 0;
+        background-color:transparent;
+        border-radius:0;
+        border:1px solid $mediumturquoise;
+        color:$mediumturquoise;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    /** end of extends **/
+    .text-paragraph-xs{
+        font-family: "Source Sans Pro", sans-serif;
+        color:$gainsbro;
+        padding: 0 1rem;
+        text-align: justify;
+        margin:0;
+    }
+    /** nav section **/
+    nav{
+        .nav-profession{
+            display:block;
+        }
+        background-color:$black;
+        .navbar-brand, .menu-item{
+            color:$yellow;    
+        }
+        padding: 0 1rem;
+
+        & > .navbar-brand{
+            font-size:.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: .8rem;
+
+            & > span{
+                color:$white;
+                font-size: .75rem;
+                font-weight:400;
+            }
+        }
+
+        & > #navbar_menu{  
+        }
+        .menu-item{
+            font-size: 1.2rem;
+            float:right;
+            margin-right:5%;
+            color:$white;
+        }
+        font-family:"Poppins", sans-serif;
+        .custom-toggler .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(33, 37, 41)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+        .custom-toggler.navbar-toggler {
+          border-color:none !important;
+          color: transparent !important;
+        }
+    }
+    /** end of nav section **/
+    /** banner section **/
+    .banner-box{
+        font-family:"Poppins", sans-serif;
+        height:100vh;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        .img-box{
+            width:60%;
+            border-radius:52% 48% 45% 55% / 64% 45% 55% 36% ;
+            background-color:$white;
+            padding:1rem;
+        }
+        .banner-details{
+            padding:0 1rem;
+            margin-left:20%;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-content: center;
+            margin-top:5rem;
+            
+            & > h1{
+                font-size:3.5rem;
+                color:$yellow;
+            }
+            & > h3{
+                font-size:2rem;
+                color:$white;
+            }
+            .banner-img-quote{
+                display:block;
+                width:8%;
+            }
+            & > .banner-btn{  
+                margin:1rem 0;
+                & > .btn-downnload{
+                    @extend %btn-style;
+                }
+            }
+            & > .scroll-down-btn{
+                position:relative;
+                font-family: "Poppins", sans-serif;
+                p{
+                    position:absolute;
+                    top:1rem;
+                    right:0;
+                    margin:0;
+                    color:$black-grey;
+                    font-weight: bold;
+                    letter-spacing: .1rem;
+                    font-size:.9rem;
+                }
+            }
+        }
+    }
+    /** end of banner section **/ 
+    /** about section **/    
+    #about{
+        .about-header{
+            position:relative;
+        }
+        .about-container{
+            width:80%;
+        }
+        position:relative;
+        padding:5rem 1rem 1rem 1rem;
+        .line-box > .line{
+            margin:1rem 0;
+        }
+        .line-box > .line-two{
+            width:3rem;
+            margin:.5rem 1rem;
+        }
+    }
+    /** end of about section **/ 
+    /** qualification section **/
+
+    .qualification-container{
+        margin-top:2.5rem;
+        margin-left:8rem;
+        .qualification-header{
+            position:relative;
+        }
+        .qualification-icon{
+            position:absolute;
+            z-index: -1;
+            font-size:3rem;
+            top:-2.8rem;
+            padding:1rem 0;
+        }
+        .qualification-title-xs{
+            font-family:"Poppins",sans-serif;
+            font-size:1.5rem;
+        }
+        .qualification-sub-xs{
+            font-size:1rem;  
+        }
+        .qualification-paragraph-xs{
+            font-size:0.9rem;
+            color:$gainsbro;
+        }
+        .qualification-title-xs, .qualification-sub-xs, .qualification-paragraph-xs{
+            margin:0;
+        }
+        .qualification-title-xs, .qualification-sub-xs{
+            color:$white;
+        }
+        .qualification-sub-xs, .qualification-paragraph-xs{
+            font-family:"Source Sans Pro",sans-serif;
+        }
+    }
+    /** end of qualification section **/
+    /** knowledge section **/
+    .knowledge-container{
+        padding:0 1rem 1rem 1rem;
+        width:80%;
+        .knowledge-text-xs{
+            $font-family: "Poppins",sans-serif;
+            margin:.5rem 0 .5rem 1rem;
+            padding-bottom: .5rem;
+            color:$white;
+            font-size:1.2rem;
+            font-weight: 600;
+            border-bottom:1px solid $black-grey;
+        }
+        .icon-knowledge{
+            float:right;
+        }
+    }
+    /** end of knowledge section **/
+    /** skills section **/
+    #skills{   
+        position:relative;
+        padding:5rem 1rem 1rem 1rem;
+        color:$gainsbro;
+    }
+    .skills-container{
+        width:80%;
+    }
+    .skills-header{
+        position:relative;
+        margin-bottom:2rem;
+    }
+    .skill-box{
+        padding:2rem;
+        position:relative;
+        z-index: -2;
+        margin-bottom:1rem;
+        .icon-knowledge{
+            position:absolute;
+            color:$black-grey;
+            z-index:-1;
+            font-size:3rem;
+            top:1.2rem;
+            left:0.7rem;
+        }
+        .s-title{
+            color:$white;
+            font-family:"Poppins", sans-serif;
+            font-weight: 600;
+            font-size:1.5rem;
+        }
+        .s-paragraph{
+            font-family:"Poppins",sans-serif;
+            margin-bottom:.3rem;
+            color:$gainsbro;
+            font-size:.9rem;
+        }
+    }
+    .line-box > .line{
+        margin:1rem 0;
+    }
+    .line-box > .line-two{
+        width:3rem;
+        margin:.5rem 1rem;
+    }
+    .s-container{
+        margin-left:9rem;
+        width:80%;        
+    }
+    .brain-img{
+        position:absolute;
+        right:10rem;
+        bottom:3rem;
+        width:30%;
+        z-index:-2;
+    }
+    /** end of skills section **/
+    /** contact section **/
+    #contact{
+        padding:5rem 1rem 1rem 1rem;
+        .message-header{
+            position:relative;
+        }
+        .message-container{
+            width:80%;
+        }
+        .btn-submit{
+            @extend %btn-style;
+            float:right;
+        }
+        .contact-email{
+            color:$mediumturquoise;
+            font-style: italic;
+            text-decoration:underline;
+        }
+        .btn-email{
+            @extend %btn-style;   
+        }
+        .contact-detail{
+            width:50%;
+            color:$gainsbro;
+            
+        }
+    }
+    /** end of contact section **/
+    /** footer section **/
+    #footer{
+        background-color:$dirty-black;
+        position:relative;
+        font-family:"Poppins", sans-serif;
+        .footer-container{
+            padding: 2rem 2rem 0 2rem;            
+        }
+        .footer-title{
+            color:$white;
+            margin:0;
+            font-weight: 600;
+        }
+        .footer-menu-item, .social-media-menu{
+            display:flex;
+            justify-content: space-around;
+        }
+        .footer-item, .footer-details, .copyright-box{
+            color:$gainsbro;
+            font-size: 0.8rem;
+        }
+        .copyright-box{
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+    }
+    /** end of footer section **/
+}
+/** end of global value **/
+
+/** skills section **/
+.skill-container{
+    margin:.5rem 0;
+}
+.progress{
+    background-color:$black-grey;
+    height:.7rem;
+}
+.progress-bar{
+    background-color:$mediumturquoise;
+}
+.img-skill{
+    height:45px;
+    width:45px;
+    padding:1.5%;
+    border-radius:10px;
+    margin-right:2%;
+}
+.skill-details{
+    width:100%;
+    h6{
+        font-style: "Poppins", sans-serif;
+        font-weight:400;
+        font-size:1rem;
+        letter-spacing: 2px;
+        color:$white;
+        font-weight: bold;
+    }
+}
+.html-progress{
+    width:80%;
+}
+.css-progress{
+    width:90%;
+}
+.js-progress{
+    width:75%;
+}
+.node-progress{
+    width:70%;
+}
+/** end of skills section **/
+
+/** footer section **/
+.custom-shape-divider-bottom-1632321456 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1632321456 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 63px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1632321456 .shape-fill {
+    fill: $dirty-black;
+}
+/** end of footer section **/
+
+
+/** Desktop Screen**/
+@media only screen and (min-width: 1024px) {
+    .navbar{
+        padding:.5rem 2rem;
+    }
+}
+/** End of Desktop Screen**/
+
+
+
+/** Tablet Screen**/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .line-middle-container{
+        display:none;
+    }
+}
+/** End of Tablet Screen**/
+
+
+
+
+/** Smartphone Screen**/
+@media only screen and (max-width: 767px) {
+    .text-paragraph-xs{
+        width:100% !important;
+    }
+    .banner-details{
+        margin: 0 !important;
+        & > h1{
+            font-size:3rem !important;
+            color:$yellow;
+        }
+        & > h3{
+            font-size:1.2rem !important;
+            color:$white;
+        }   
+    }
+    .img-box{
+        display:none;
+    }
+    /**  portfolio section **/
+    #portfolio{
+    }
+    /**  end of portfolio section **/
+
+    /** qualification section **/
+    .qualification-container{
+        margin-left:0 !important;
+        margin-top:0 !important;
+        background-color:transparent !important;
+    } 
+    .qualification-box{
+        width:100% !important;
+    }
+    /** end of qualification section **/
+    /** about section **/
+    .about-container{
+        width:100% !important;
+    }
+    /** end of about section **/
+    /** skill section **/
+    .skills-container{
+        width:100% !important;
+    }
+    .s-box{
+        margin-bottom:-3rem !important;
+    }
+    .brain-img{ 
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        z-index:-2;
+        width:300px !important;
+        height:auto;
+    }
+    /** end of skill section **/
+    /** knowledge section **/
+    .knowledge-container{
+        width:100% !important;
+    }
+    /** end of knowledge section **/
+    /** contact section **/
+    .message-container{
+        width:100% !important;
+    }
+    .contact-detail{
+        width:100% !important;   
+    }
+    /** end of contact section **/
+}
+/** End of Smartphone Screen**/
+
+
