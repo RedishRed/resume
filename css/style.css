@@ -117,9 +117,6 @@ body {
   /** end of skills section **/
   /** testimonials section **/
   /** end of testimonials section **/
-  /** portfolio section **/
-  /** end of portfolio section **/
-  /** contact section **/
   /** end of contact section **/
   /** footer section **/
   /** end of footer section **/ }
@@ -406,6 +403,13 @@ body {
     color: #FFFFFF; }
   body .testimonial-container {
     margin: 10% 10%; }
+  body .carousel-control-next, body .carousel-control-prev {
+    top: 35%;
+    border: 2px solid #191919;
+    border-radius: 50%;
+    width: 8%;
+    height: 20%;
+    background-color: #191919; }
   body .c-portfolio {
     position: relative;
     margin: 0 8rem; }
@@ -622,7 +626,15 @@ body {
     left: 4.5rem !important; }
 
   .c-portfolio .c-title {
-    left: 5rem !important; } }
+    left: 5rem !important; }
+
+  .carousel-control-next, .carousel-control-prev {
+    top: 50% !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    width: 15% !important;
+    height: 0;
+    background-color: transparent !important; } }
 /** End of Tablet Screen**/
 /** Smartphone Screen**/
 @media only screen and (max-width: 767px) {
@@ -710,7 +722,15 @@ body {
       left: 0 !important; }
 
   .content-list {
-    margin-top: 1rem !important; } }
+    margin-top: 1rem !important; }
+
+  .carousel-control-next, .carousel-control-prev {
+    top: 50% !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    width: 15% !important;
+    height: 0;
+    background-color: transparent !important; } }
 /** End of Smartphone Screen**/
 
 /*# sourceMappingURL=style.css.map */

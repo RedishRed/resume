@@ -15,7 +15,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: $black;
+    background-color:$black;
 
     a{
         text-decoration: none;
@@ -496,6 +496,14 @@ body{
         margin: 10% 10%;
 
     }
+    .carousel-control-next, .carousel-control-prev{
+        top:35%;
+        border:2px solid #191919;
+        border-radius:50%;
+        width:8%;
+        height:20%;
+        background-color:#191919;
+    }
     /** end of testimonials section **/
     .c-portfolio{
         position: relative;
@@ -588,31 +596,6 @@ body{
             }
         }
     }
-    /** portfolio section **/
-    // .projects{
-    //     display:grid;
-    //     height:400px;
-    //     grid-template-rows:repeat(3,1fr);
-    //     grid-template-columns:repeat(2,1fr);
-    //     grid-gap:20px;
-    //     width:70%;
-    //     margin-top:5rem;
-    // }
-    // .project-item{
-    //     background-color:red;
-    //     display:flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     font-weight: bold;
-    // }
-    // .project-one,.project-three{
-    //     grid-column:2 / span 1;
-    // }
-    // .project-two{
-    //     grid-row:1 /span 2;
-    // }
-    /** end of portfolio section **/
-    /** contact section **/
     #contact{
         padding:5rem 1rem 1rem 1rem;
         .message-header{
@@ -796,6 +779,14 @@ body{
             left:5rem !important;            
         }
     }
+    .carousel-control-next, .carousel-control-prev{
+        top:50% !important;
+        border:0 !important;
+        border-radius:0 !important;
+        width:15% !important;
+        height:0;
+        background-color:transparent !important;
+    }
 }
 /** End of Tablet Screen**/
 
@@ -896,6 +887,14 @@ body{
     }
     .content-list{
         margin-top:1rem !important;
+    }
+    .carousel-control-next, .carousel-control-prev{
+        top:50% !important;
+        border:0 !important;
+        border-radius:0 !important;
+        width:15% !important;
+        height:0;
+        background-color:transparent !important;
     }
 }
 /** End of Smartphone Screen**/
